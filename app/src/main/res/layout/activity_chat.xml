@@ -22,7 +22,7 @@
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,39 +31,26 @@
         android:padding="8dp">
 
 
-        <ImageButton
-            android:id="@+id/back_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:background="@android:color/transparent"
-            android:contentDescription="@string/backbutton"
-            android:minWidth="48dp"
-            android:minHeight="48dp"
-            android:src="@android:drawable/ic_menu_revert" />
-
         <EditText
             android:id="@+id/chat_input"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:autofillHints=""
-            android:hint="@string/type_your_message"
-            android:inputType=""
-            android:minHeight="48dp"
-            android:background="@drawable/input_background"
-            android:padding="8dp"
-            tools:ignore="VisualLintTextFieldSize" />
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/send_button"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Type your message"
+            android:padding="10dp"
+            android:textColor="@android:color/black" />
 
-        <Button
+
+        <ImageView
             android:id="@+id/send_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/send"
-            android:background="@drawable/send_button_background"
-            android:layout_margin="4dp"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_send" />
 
-    </LinearLayout>
+    </RelativeLayout>
 </RelativeLayout>

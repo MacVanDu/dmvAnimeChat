@@ -1,5 +1,6 @@
 package com.example.dumvanimechat;
 
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -25,7 +26,7 @@ import android.widget.ImageView;
 public class ChatActivity extends AppCompatActivity {
     private RecyclerView chatRecyclerView;
     private EditText chatInput;
-    private Button sendButton;
+    private ImageView sendButton;
     private List<TinNhan> chatTinNhans;
 
     private ChatGPTService chatGPTService;
@@ -60,13 +61,13 @@ public class ChatActivity extends AppCompatActivity {
         final ChatAdapter chatAdapter = new ChatAdapter(chatTinNhans);
         chatRecyclerView.setAdapter(chatAdapter);
 
-        ImageButton backButton = findViewById(R.id.back_button);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
+//        ImageButton backButton = findViewById(R.id.back_button);
+//        backButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                onBackPressed();
+//            }
+//        });
 
         chatInput.setOnKeyListener(new View.OnKeyListener() {
             @Override
